@@ -64,18 +64,12 @@ main{
     margin: 0 auto;
 }
 
-/* 
-
-#3A4F52
-
-#02383A
-
-#4DA7CA
+.work, .blog, .testimonials{
+    padding: 3em 0;
+}
 
 
-*/
-
-/* PARALAX */
+/* PARALLAX */
 
 .services, .quote, .contact{
     background-attachment: fixed;
@@ -98,7 +92,7 @@ main{
     color: #fff;
 }
 
-/* PARALAX END */
+/* PARALLAX END */
 
 /* BUTTON */
 
@@ -108,6 +102,7 @@ main{
     color: #fff;
     padding: 1em 2em;
     cursor: pointer;
+    margin-top: 2em;
 }
 
 .quote-btn:hover, .btn-submit:hover{
@@ -341,9 +336,6 @@ header nav .logo a{
 }
 
 
-
-
-
 /* SERVICES */
 .services{
     background-image: url(../img/service-01.jpg);
@@ -359,6 +351,7 @@ header nav .logo a{
 
 .service-detail-item{
     width: 90%;
+    margin: 0 auto;
 }
 
 .service-icon{
@@ -540,6 +533,10 @@ footer p{
         height: 90vh;
     }
 
+    .service-icon{
+        max-width: 10%;
+    }
+
     .blog-gallery{
         display: flex;
         gap: 2em;
@@ -663,12 +660,11 @@ footer p{
     .testimonials-wrapper{
         display: flex;
         flex-direction: row;
-        margin-left: -10%;
-        width: 95vw;
+        gap: 3em;
         justify-content: space-between;
     }
     .testimonials-item p {
-        width: 26.5vw;
+    
         text-align: center;
         margin-bottom: 7%;
     }
