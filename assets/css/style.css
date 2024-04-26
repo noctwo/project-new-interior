@@ -110,6 +110,11 @@ main{
     cursor: pointer;
 }
 
+.quote-btn:hover, .btn-submit:hover{
+    background-color: #fff;
+    color: #3A4F52;
+}
+
 /* HEADER - NAV */
 /* HERO */
 /* WORK */
@@ -135,6 +140,10 @@ header nav .logo a{
     font-size: 2.25rem;
     font-family: "Algi-SC-Medium";
     text-decoration: none;
+}
+
+.logo a:hover{
+    text-decoration: underline;
 }
 
 /* HERO */
@@ -166,26 +175,36 @@ header nav .logo a{
 
 /* WORK */
 
-.work .section-headline-cta {
+.work .section-headline-cta, 
+.blog .section-headline-cta {
     color: #3A4F52;
     display: flex;
+    justify-content: space-between;
+    gap: 2.5em;
     padding: 10% 2%;
 }
-.work .section-headline-cta hgroup h2 {
+.work .section-headline-cta hgroup h2,
+.blog .section-headline-cta hgroup h2,
+.work .section-headline-cta hgroup p,
+.blog .section-headline-cta hgroup p{
     margin-bottom: 5%;
-    width: 7em;
 }
-.work .section-headline-cta hgroup p {
-    margin-bottom: 5%;
-    width: 20em;
-}
-.work .section-headline-cta button {
+
+.work .section-headline-cta button,
+.blog .section-headline-cta button {
     border: 1px solid #3A4F52;
     height: 3.5em;
     width: 7em;
-    margin: 3% 3% 0 0;
     margin-left: -10%;
     color: #3A4F52;
+}
+
+.work .section-headline-cta button:hover,
+.blog .section-headline-cta button:hover {
+    border: 1px solid #3A4F52;
+    color: #fff;
+    background-color: #3A4F52;
+    cursor: pointer;
 }
 
 .works-gallery .gallery-item  {
@@ -239,6 +258,7 @@ header nav .logo a{
     background-position: center;
     background-size: cover;
 }
+
 .works-gallery .gallery-item-six {
     background-image: url(../img/works-06.jpg);
     height: 35vh;
@@ -247,17 +267,81 @@ header nav .logo a{
     background-size: cover;
 }
 
-.gallery-item:hover {
+
+/*
+.gallery-item{
+    height: 35vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.gallery-item-child{
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    transition: all .5s;
+}
+
+.g-i-one{
+    background-image: url(../img/works-01.jpg);
+}
+
+.g-i-two{
+    background-image: url(../img/works-02.jpg);
+}
+
+.g-i-three{
+    background-image: url(../img/works-03.jpg);
+}
+
+.g-i-four{
+    background-image: url(../img/works-04.jpg);
+}
+
+.g-i-five{
+    background-image: url(../img/works-05.jpg);
+}
+
+.g-i-six{
+    background-image: url(../img/works-06.jpg);
+}    
+
+.gallery-item:hover .gallery-item-child{
+    transform: scale(1.2);
+    transition: all 0.5s ease-in-out;
     background-color:#02383abc;
     background-blend-mode: overlay;
+    cursor: pointer;
     .gallery-btn {
         display: block;
     }
+    .gallery-btn:hover {
+        color: #3A4F52;
+        background-color: white;
+        cursor: pointer;
+    }
 }
-.gallery-btn:hover {
-    color: #3A4F52;
-    background-color: white;
+*/
+
+
+.gallery-item:hover {
+    transition: all 0.5s ease-in-out;
+    background-color:#02383abc;
+    background-blend-mode: overlay;
+    cursor: pointer;
+    .gallery-btn {
+        display: block;
+    }
+    .gallery-btn:hover {
+        color: #3A4F52;
+        background-color: white;
+        cursor: pointer;
+    }
 }
+
+
+
 
 
 /* SERVICES */
@@ -308,6 +392,10 @@ header nav .logo a{
     color: #4DA7CA;
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+.blog-item-link:hover{
+    text-decoration: underline;
 }
 
 .blog-item-img{
@@ -448,30 +536,77 @@ footer p{
 /* TABLET */
 @media screen and (min-width: 768px) {
 
-    main{
-        background-color: orangered;
-    }
-
     .services{
-        height: 80vh;
+        height: 90vh;
     }
 
     .blog-gallery{
         display: flex;
         gap: 2em;
     }
+
+    .bii-one{
+        height: 18vh;
+    }
+    
+    .bii-two{
+        height: 20vh;
+    }
+    
+    .bii-three{
+        height: 22vh;
+    }
     
     .quote{
-        height: 40vh;
+        height: 50vh;
     }
+
+    /* --- */
+
+    .hero {
+        height: 100%;
+        background-size: contain;
+        margin-top: -32%;
+        }
+    .hero hgroup h1 {
+        margin-top: -35%;
+        font-size: 3.5rem;
+    }
+    .hero hgroup p {
+        color: rgba(255, 255, 255, 0.409);
+        font-size: 1.4rem;
+    }
+    .work .section-headline-cta {
+        justify-content: space-between;
+        padding: 0 2% 5% 2%;
+        margin-top: -5%;
+    }
+    .works-gallery .gallery-item {
+        width: 30vw;
+        height: 20vh;
+        display: inline-block;
+        vertical-align: top;
+        margin-bottom: 10%;
+        gap: 20px;
+        margin: 3% 1%;
+        align-content: center;
+    }
+    .works-gallery .gallery-item:hover {
+        background-size: 170%;
+        background-position: center;
+        transition: 0.3s;
+    }
+    .works-gallery {
+        text-align: center;
+    }
+    .gallery-btn {
+        margin: 0 auto;
+    }
+
 }
 
 /* DESKTOP */
-@media screen and (min-width: 1440px) {
-
-    main{
-        background-color: greenyellow;
-    }
+@media screen and (min-width: 1300px) {
 
     .services{
         height: 60vh;
@@ -480,8 +615,75 @@ footer p{
         flex-direction: row;
     }
 
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     input[type=text], input[type=email], textarea{
         width: 50%;
     }
+
+    /* --- */
+
+    header nav{
+        display: none;
+    }
+    .hero hgroup h1{
+        display: none;
+    }
+    .hero hgroup p{
+        display: none;
+    }
+    .hero {
+        height: 80vh;
+        margin-top: -100px;
+        margin-bottom: 10%;
+    }
+    .work .section-headline-cta {
+        font-family: "Algi-Sans-Medium";
+        font-weight: 100;
+        padding: 0 10%;
+    }
+    .work .section-headline-cta button {
+        margin-top: 0%;
+        margin-right: 0%;
+    }
+    .works-gallery .gallery-item {
+        width: 25vw;
+        height: 30vh;
+    }
+    .works-gallery .gallery-item:hover {
+        background-size: 170%;
+        background-position: center;
+        transition: 0.3s;
+    }
+
+    .testimonials-wrapper{
+        display: flex;
+        flex-direction: row;
+        margin-left: -10%;
+        width: 95vw;
+        justify-content: space-between;
+    }
+    .testimonials-item p {
+        width: 26.5vw;
+        text-align: center;
+        margin-bottom: 7%;
+    }
+    .testimonials-item h5 {
+        margin-bottom: 1%;
+    }
 }
 
+
+/* XL SCREENS DESKTOP */
+@media screen and (min-width: 1900px) {
+    
+    main, footer{
+        max-width: 1900px;
+        margin: 0 auto;
+    }
+
+}
